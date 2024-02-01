@@ -1,0 +1,40 @@
+spring:
+  config:
+    import: optional:file:.env-prod[.properties]
+  datasource:
+    username: ${POSTGRES_USERNAME}
+    password: ${POSTGRES_PASSWORD}
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://${HOST}:${POSTGRES_PORT}/${POSTGRES_DATABASE}?currentSchema=${POSTGRES_SCHEMA}
+  liquibase:
+    changeLog: classpath:liquibase/db.changelog.yaml
+    defaultSchema: public
+    enabled: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: romatempforjet@gmail.com
+    password: ydkl aobk ctcc jloj
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+security:
+  jwt:
+    secret: ${JWT_SECRET}
+    access: 2592000000
+    refresh: 2592000000
+minio:
+  bucket: ${MINIO_BUCKET}
+  url: ${MINIO_URL}
+  accessKey: ${MINIO_ACCESS_KEY}
+  secretKey: ${MINIO_SECRET_KEY}
+springdoc:
+  override-with-generic-response: false
+yandex:
+  geocoder:
+    key: ${GEOCODER_API_KEY}
+    url: https://geocode-maps.yandex.ru/1.x/?apikey=${GEOCODER_API_KEY}&geocode=
+    format: format=json

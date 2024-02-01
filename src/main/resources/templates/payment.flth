@@ -1,0 +1,55 @@
+
+<#ftl encoding="UTF-8">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Thank you, ${username}, for ordering, it is your bill.
+        Вот пример HTML-шаблона для чека на покупку билета на мероприятие:
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .receipt-info {
+            margin-top: 20px;
+        }
+
+        .receipt-info p {
+            margin: 5px 0;
+        }
+
+        .total {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Чек на покупку билета</h1>
+    <div class="receipt-info">
+        <p><strong>Мероприятие:</strong> Концерт "Название мероприятия"</p>
+        <p><strong>Место:</strong> Место проведения</p>
+        <p><strong>Дата:</strong> 01.01.2023</p>
+        <p><strong>Время:</strong> 19:00</p>
+        <p><strong>Цена билета:</strong> $50.00</p>
+        <p><strong>Количество билетов:</strong> 2</p>
+        <p class="total"><strong>Итого к оплате:</strong> $100.00</p>
+    </div>
+</div>
+</body>
+</html>
+```
+
